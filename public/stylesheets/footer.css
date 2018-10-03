@@ -1,0 +1,13 @@
+.footer {
+  display: inline-block;
+  height: 10em;
+  width: 100%;
+  margin-top: 3em;
+  background-color: var(--text-default);
+  text-align: center;
+}
+
+.footer__text {
+  color: var(--color-white);
+  margin-top: 2em;
+}

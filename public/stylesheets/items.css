@@ -19,7 +19,9 @@
 
 .thumbnail {
   background-color: #4A4A4A;
+  background-size: cover;
   width: 96%;
+  height: 18em;
   margin: 0.5em auto;
 }
 
