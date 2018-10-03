@@ -36,6 +36,22 @@
   font-weight: 300;
 }
 
+.title {
+  text-align: center;
+}
+
+h1.title__section_title {
+  color: var(--text-default);
+  font-size: 52px;
+  font-weight: 200;
+}
+hr.title__section_title_divide {
+  width: 5em;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  border-color: var(--color-blue-light);
+}
+
 h1.title__light {
   font-size: 64px;
 }
