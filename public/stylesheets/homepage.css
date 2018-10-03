@@ -1,0 +1,70 @@
+.section {
+
+}
+
+#jumbotron {
+  z-index: 1;
+  height: 800px;
+  background: #cccccc url("../images/background-01__unsplash.png") no-repeat center;
+  background-size: cover;
+}
+
+#rectangle__custom {
+  z-index: 2;
+  top: -10em;
+  width: 100%;
+  position: relative;
+}
+
+#rectangle__content {
+  z-index: 3;
+  top: 15em;
+  left: 3em;
+  position: absolute;
+  text-align: center;
+}
+
+.title__light {
+  font-family: "Helvetica Neue", serif;
+  font-weight: 200;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.red {
+  color: var(--color-red);
+  font-weight: 300;
+}
+
+h1.title__light {
+  font-size: 64px;
+}
+
+h2.title__light {
+  font-size: 52px;
+}
+
+h3.title__light {
+  font-size: 36px;
+}
+
+.section__end {
+  position: relative;
+  width: 100%;
+  top: -5.5em;
+}
+
+.section__end_image {
+  position: absolute;
+  width: 100%;
+}
+
+.section__end_text {
+  position: absolute;
+  width: 100%;
+  top: 1em;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+  color: var(--color-white);
+}

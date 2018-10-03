@@ -2,5 +2,12 @@ extends layout
 
 block content
   include header.pug
-  h1 Quality Cookies
-
+  .section#jumbotron
+    img#rectangle__custom(src=("/images/rectangle__custom.svg"))
+    #rectangle__content
+      h1.title__light Quality Cookies
+      h3.title__light made with
+      h2.title__light.red LOVE
+  .section__end
+    img.section__end_image(src=("/images/Shadow.svg"))
+    p.section__end_text Find something delicious below

@@ -1,24 +1,27 @@
 .header {
+  position: relative;
   display: block;
-}
-
-.header__wrapper {
-
+  z-index: 5;
 }
 
 .header__topBar {
   height: 8em;
   width: 100%;
   background-color: var(--color-grey);
+  z-index: 5;
 }
+
 .header__subBar {
   height: 2.2em;
   width: 100%;
   background-color: var(--color-blue-light);
+  z-index: 5;
 }
+
 .header__logo {
   width: 10em;
   margin-left: 2em;
+  z-index: 5;
 }
 
 .header__menu {
@@ -28,10 +31,12 @@
   margin-left: auto;
   text-decoration: none;
   color: var(--text-default);
+  z-index: 5;
 }
 
 .header__menu_hamburger {
   float: right;
   position: relative;
   margin-left: 1em;
+  z-index: 5;
 }
