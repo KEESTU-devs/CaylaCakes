@@ -1,6 +1,7 @@
 @import "global.css";
 @import "header.css";
 @import "homepage.css";
+@import "items.css";
 
 body {
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;

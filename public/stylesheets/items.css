@@ -1,0 +1,68 @@
+#menu {
+  background-color: var(--color-white);
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.item__preview {
+  background-color: var(--color-grey);
+  display: inline-block;
+  width: 30%;
+  min-width: 25em;
+  max-width: 30em;
+  margin: 0.5em;
+}
+
+.thumbnail {
+  background-color: #4A4A4A;
+  width: 96%;
+  margin: 0.5em auto;
+}
+
+.row {
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+}
+
+.item__title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 200;
+  color: var(--text-default);
+  font-size: 24px;
+}
+
+.item__rating {
+  color: var(--text-light);
+}
+
+.item__add_to_cart {
+  width: 10em;
+  height: 2.8em;
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  position: relative;
+  top: -2em;
+}
+
+.item__price {
+  color: var(--text-default);
+  width: 5em;
+  position: relative;
+  top: 1em;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+.item__price_value {
+  padding-left: auto;
+  margin: 1px;
+}
+
+.item__price_subtext {
+  margin: 1px;
+}
