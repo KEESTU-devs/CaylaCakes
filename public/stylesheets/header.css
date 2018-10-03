@@ -1,0 +1,37 @@
+.header {
+  display: block;
+}
+
+.header__wrapper {
+
+}
+
+.header__topBar {
+  height: 8em;
+  width: 100%;
+  background-color: var(--color-grey);
+}
+.header__subBar {
+  height: 2.2em;
+  width: 100%;
+  background-color: var(--color-blue-light);
+}
+.header__logo {
+  width: 10em;
+  margin-left: 2em;
+}
+
+.header__menu {
+  float: right;
+  margin-top: 4em;
+  margin-right: 4em;
+  margin-left: auto;
+  text-decoration: none;
+  color: var(--text-default);
+}
+
+.header__menu_hamburger {
+  float: right;
+  position: relative;
+  margin-left: 1em;
+}

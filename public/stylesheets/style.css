@@ -1,6 +1,9 @@
+@import "global.css";
+@import "header.css";
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 
 a {

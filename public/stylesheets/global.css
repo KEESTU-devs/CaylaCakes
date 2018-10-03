@@ -1,0 +1,15 @@
+:root {
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 600;
+  --font-bold: 700;
+  --text-default: #4A4A4A;
+  --color-blue: #1C7EEC;
+  --color-blue-light: #B1BFFE;
+  --color-white: #FFFFFF;
+  --color-grey: #F2F2F2;
+  --color-orange: #ae2c0f;
+  --color-background: #F9F9F9;
+  --color-placeholder: #BFBFBF;
+  --font-family: "Montserrat", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+}

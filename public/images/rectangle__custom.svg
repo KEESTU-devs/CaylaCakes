@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="343px" viewBox="0 0 1024 343" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="83.6150076%" y1="55.6298336%" x2="31.528937%" y2="29.5866332%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.82" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(0.000000, -135.000000)" fill="url(#linearGradient-1)">
+            <g id="Landing-Section" transform="translate(-20.000000, 0.000000)">
+                <g id="Quality-Cookies" transform="translate(0.000000, 135.000000)">
+                    <path d="M20,0 L1044.23155,-2.84217094e-14 C1043.95165,17.1133945 1043.95165,28.8487125 1044.23155,35.205954 C1044.80753,48.2879272 1047.90525,38.577481 1044.23155,43.3059109 C931.23377,188.745709 843.692868,219.94169 740.977512,273.724798 C629.601752,332.042607 389.275915,353.23306 20,337.296155 L20,0 Z" id="Rectangle-5"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
