@@ -5,7 +5,7 @@
 #jumbotron {
   z-index: 1;
   height: 800px;
-  background: #cccccc url("../images/background-01__unsplash.png") no-repeat center;
+  background: #cccccc url("https://images.unsplash.com/photo-1511434139893-de3e59cdeee5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3a42946a1762e304f3b8d8dc9372b2cd&auto=format&fit=crop&w=1951&q=80") no-repeat center;
   background-size: cover;
 }
 
@@ -31,11 +31,6 @@
   margin: 0;
 }
 
-.red {
-  color: var(--color-red);
-  font-weight: 300;
-}
-
 .title {
   text-align: center;
 }
@@ -45,6 +40,7 @@ h1.title__section_title {
   font-size: 52px;
   font-weight: 200;
 }
+
 hr.title__section_title_divide {
   width: 5em;
   margin-top: -30px;
@@ -78,4 +74,49 @@ h3.title__light {
   font-weight: 200;
   text-align: center;
   color: var(--color-white);
+}
+
+#cayla {
+  margin-top: 4em;
+  height: 100%;
+  padding: 2em;
+  background-color: var(--color-red);
+}
+
+.image-cropper {
+  display: table;
+  width: 15em;
+  height: 15em;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#cayla_profile_picture {
+  display: inline;
+  margin: 0 0 0 -3.5em;
+  height: 100%;
+  width: auto;
+}
+
+#about {
+  width: 70%;
+  display: inline-block;
+  color: var(--color-white);
+  font-size: 18px;
+  text-align: left;
+}
+
+.about__text {
+  text-indent: 2em;
+  line-height: 1.5em;
+}
+.red {
+  color: var(--color-red);
+  font-weight: 300;
+}
+
+.white {
+  color: var(--color-white) !important;
 }
