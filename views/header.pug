@@ -2,7 +2,38 @@ header.header
   .header__wrapper
     .header__topBar
       img.header__logo(src="/images/Logo.svg")
-      a.header__menu(href="/")
-        span Menu
+      span.header__menu(onclick="openNav()") Menu
         img.header__menu_hamburger(src="/images/Hamburger.svg")
+      .sidenav#sidenav
+        span.closebtn(onclick="closeNav()") X
+        a Menu
+        a Contact Information
+        a Refund Policy
+        a Allergy Information
+        a Custom Orders
+        br
+        br
+        a Legal
+        .shopping_cart
+          h3 My Cart
+            .row
+              span [empty] 
+            .row
+              small 6% tax
+              span $0.00
+            .row
+              hr
+            .row
+              p Order Total: $5.28
+            .row
+              button Place Order
     .header__subBar
+
+  script.
+    function openNav () {
+      document.getElementById("sidenav").style.width = "333px";
+    }
+
+    function closeNav () {
+      document.getElementById("sidenav").style.width = "0";
+    }
