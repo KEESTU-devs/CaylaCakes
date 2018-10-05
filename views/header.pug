@@ -5,7 +5,7 @@ header.header
       span.header__menu(onclick="openNav()") Menu
         img.header__menu_hamburger(src="/images/Hamburger.svg")
       .sidenav#sidenav
-        span.closebtn(onclick="closeNav()") X
+        span.closebtn(onclick="closeNav()") &times;
         a Menu
         a Contact Information
         a Refund Policy
@@ -17,14 +17,19 @@ header.header
         .shopping_cart
           h3 My Cart
             .row
-              span [empty] 
+              .cart
+                each item in shoppingCart
+                  .shopping_cart__item
+                    span.item__name= `${item.quantity}x ${item.name} `
+                    span.item__unit_price= `$${item.unitPrice * item.quantity}`
+                    small.shopping_cart__item_remove &times;
             .row
               small 6% tax
-              span $0.00
+              span= ` $${tax}`
             .row
               hr
             .row
-              p Order Total: $5.28
+              p= `Order Total: $${total}`
             .row
               button Place Order
     .header__subBar

@@ -32,8 +32,8 @@
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
-  top: 0;
-  left: 25px;
+  top: 10px;
+  left: 0;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -48,4 +48,28 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.shopping_cart {
+  position: absolute;
+  overflow: scroll;
+  height: 400px;
+  width: 100%;
+  margin: auto;
+  bottom: 10%;
+}
+
+.cart {
+  height: 230px;
+  overflow: scroll;
+}
+
+.shopping_cart__item {
+  margin: 12px;
+}
+
+.shopping_cart__item_remove {
+  position: absolute;
+  margin-left: 10px;
+  color: var(--color-red);
 }
