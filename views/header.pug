@@ -18,11 +18,11 @@ header.header
           h3 My Cart
             .row
               .cart
-                each item in shoppingCart
+                each item in cart
                   .shopping_cart__item
                     span.item__name= `${item.quantity}x ${item.name} `
                     span.item__unit_price= `$${item.unitPrice * item.quantity}`
-                    small.shopping_cart__item_remove &times;
+                    span#removeItem.shopping_cart__item_remove(onClick='removeItem(\'' + item.name + '\')') &times;
             .row
               small 6% tax
               span= ` $${tax}`
@@ -31,7 +31,7 @@ header.header
             .row
               p= `Order Total: $${total}`
             .row
-              button Place Order
+              button#checkout Place Order
     .header__subBar
 
   script.
@@ -42,3 +42,33 @@ header.header
     function closeNav () {
       document.getElementById("sidenav").style.width = "0";
     }
+
+    function removeItem (name) {
+      $.ajax({
+        type: 'POST',
+        url: `/removeItem`,
+        data: { item: name },
+        success: function (resultData) {
+
+        },
+        error: function (error) {
+          console.log(error)
+          alert(error)
+        }
+      });
+    }
+
+    $('#checkout').on('click', function (e) {
+      e.preventDefault()
+      $.ajax({
+        type: 'POST',
+        url: '/clearCart',
+        success: function (resultData) {
+
+        },
+        error: function (error) {
+          console.log(error)
+          alert(error)
+        }
+      });
+    });

@@ -10,4 +10,21 @@
       span.item__price_value $12.99
       br
       small.item__price_subtext per order
-    button.item__add_to_cart Add to Cart
+    button#caylaCakes.item__add_to_cart Add to Cart
+
+  script.
+    $('#caylaCakes').on('click', function (e) {
+      e.preventDefault()
+      $.ajax({
+        type: 'POST',
+        url: '/addToCart',
+        data: { name: 'Cayla Cake', quantity: 1, unitPrice: 12.99 },
+        success: function (resultData) {
+
+        },
+        error: function (error) {
+          console.log(error)
+          alert(error)
+        }
+      });
+    });
