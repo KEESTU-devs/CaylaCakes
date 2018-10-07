@@ -7,12 +7,13 @@
             span.item__name= `${item.quantity}x ${item.name} `
             span.item__unit_price= `$${item.unitPrice * item.quantity}`
             span#removeItem.shopping_cart__item_remove(onClick='removeItem(\'' + item.name + '\')') &times;
-    .row
-      small 6% tax
-      span= ` $${tax}`
-    .row
-      hr
-    .row
-      p= `Order Total: $${total}`
-    .row
-      button#checkout Place Order
+    .totals
+      .row
+        small 6% tax
+        span= ` $${tax}`
+      .row
+        hr
+      .row
+        p= `Order Total: $${total}`
+      .row
+    button#checkout Place Order

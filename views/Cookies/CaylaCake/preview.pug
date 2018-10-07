@@ -21,6 +21,7 @@
         data: { name: 'Cayla Cake', quantity: 1, unitPrice: 12.99 },
         success: function (resultData) {
           $('.cart').html(resultData.cart)
+          $('.totals').html(resultData.totals)
         },
         error: function (error) {
           console.log(error)
