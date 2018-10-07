@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="870699b5-0e14-43cf-81b3-62747ad7d193" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Cookies/CaylaCake/preview.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Cookies/CaylaCake/preview.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Cookies/CinnamonCookie/preview.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Cookies/CinnamonCookie/preview.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Cookies/FlakeCookie/preview.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Cookies/FlakeCookie/preview.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Cookies/GooeyChocolateChip/preview.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Cookies/GooeyChocolateChip/preview.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Cookies/MnMCookie/preview.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Cookies/MnMCookie/preview.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Cookies/SugarCookie/preview.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/Cookies/SugarCookie/preview.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/header.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/header.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/shoppingCart.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/shoppingCart.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,7 +49,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="2813" />
-          <entry key="js" value="3898" />
+          <entry key="js" value="3933" />
           <entry key="pug" value="4461" />
         </counts>
       </usages-collector>
@@ -66,7 +58,7 @@
           <entry key="CSS" value="2813" />
           <entry key="HTML" value="10" />
           <entry key="Jade" value="4461" />
-          <entry key="JavaScript" value="3888" />
+          <entry key="JavaScript" value="3923" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -84,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/shoppingCart.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
@@ -93,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+            <state relative-caret-position="452">
+              <caret line="80" column="91" selection-start-line="80" selection-start-column="91" selection-end-line="80" selection-end-column="91" />
               <folding>
                 <element signature="e#285#292#0" expanded="true" />
               </folding>
@@ -132,7 +124,6 @@
         <option value="$PROJECT_DIR$/public/stylesheets/sidemenu.css" />
         <option value="$PROJECT_DIR$/views/index.pug" />
         <option value="$PROJECT_DIR$/views/layout.pug" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/header.pug" />
         <option value="$PROJECT_DIR$/views/Cookies/CaylaCake/preview.pug" />
         <option value="$PROJECT_DIR$/views/Cookies/CinnamonCookie/preview.pug" />
@@ -141,6 +132,7 @@
         <option value="$PROJECT_DIR$/views/Cookies/MnMCookie/preview.pug" />
         <option value="$PROJECT_DIR$/views/Cookies/SugarCookie/preview.pug" />
         <option value="$PROJECT_DIR$/views/shoppingCart.pug" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -305,12 +297,12 @@
       <workItem from="1538708586524" duration="818000" />
       <workItem from="1538718191756" duration="2229000" />
       <workItem from="1538753026570" duration="8000" />
-      <workItem from="1538766843471" duration="20327000" />
+      <workItem from="1538766843471" duration="21251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36838000" />
+    <option name="totallyTimeSpent" value="37762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="23" width="1381" height="987" extended-state="0" />
@@ -447,16 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="81" column="29" lean-forward="true" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-          <folding>
-            <element signature="e#285#292#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/Cookies/SugarCookie/preview.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -510,6 +492,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="80" column="91" selection-start-line="80" selection-start-column="91" selection-end-line="80" selection-end-column="91" />
+          <folding>
+            <element signature="e#285#292#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -36,7 +36,7 @@ function generateTotals (cart) {
 
 function rootAction (req, res) {
   try {
-    let cart = JSON.parse(req.cookies['shopping-cart']) || []
+    let cart = req.cookies['shopping-cart'] ? JSON.parse(req.cookies['shopping-cart']) : []
 
     let total = 0
     let tax
@@ -78,7 +78,7 @@ function removeItem (req, res) {
 function addToCart (req, res) {
   try {
     const item = [{ name: req.body.name, quantity: req.body.quantity, unitPrice: req.body.unitPrice }]
-    let cart = JSON.parse(req.cookies['shopping-cart']) || []
+    let cart = req.cookies['shopping-cart'] ? JSON.parse(req.cookies['shopping-cart']) : []
     cart = [...cart, ...item]
     res.cookie('shopping-cart', JSON.stringify(cart))
     res.status(200).send({ cart: generateCartHtml(cart), totals: generateTotals(cart) })
