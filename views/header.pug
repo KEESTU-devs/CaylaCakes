@@ -14,24 +14,7 @@ header.header
         br
         br
         a Legal
-        .shopping_cart
-          h3 My Cart
-            .row
-              .cart
-                each item in cart
-                  .shopping_cart__item
-                    span.item__name= `${item.quantity}x ${item.name} `
-                    span.item__unit_price= `$${item.unitPrice * item.quantity}`
-                    span#removeItem.shopping_cart__item_remove(onClick='removeItem(\'' + item.name + '\')') &times;
-            .row
-              small 6% tax
-              span= ` $${tax}`
-            .row
-              hr
-            .row
-              p= `Order Total: $${total}`
-            .row
-              button#checkout Place Order
+        include shoppingCart
     .header__subBar
 
   script.
@@ -49,7 +32,8 @@ header.header
         url: `/removeItem`,
         data: { item: name },
         success: function (resultData) {
-
+          console.log(resultData)
+          $('.cart').html(resultData.cart)
         },
         error: function (error) {
           console.log(error)
@@ -64,7 +48,7 @@ header.header
         type: 'POST',
         url: '/clearCart',
         success: function (resultData) {
-
+          $('.cart').html(resultData.cart)
         },
         error: function (error) {
           console.log(error)

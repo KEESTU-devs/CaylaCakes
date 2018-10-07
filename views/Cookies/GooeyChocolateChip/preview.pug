@@ -20,7 +20,7 @@
         url: '/addToCart',
         data: { name: 'Gooey Chocolate Chip', quantity: 1, unitPrice: 8.99 },
         success: function (resultData) {
-
+          $('.cart').html(resultData.cart)
         },
         error: function (error) {
           console.log(error)

@@ -20,7 +20,7 @@
         url: '/addToCart',
         data: { name: 'Cinnamon Cookies', quantity: 1, unitPrice: 4.99 },
         success: function (resultData) {
-
+          $('.cart').html(resultData.cart)
         },
         error: function (error) {
           console.log(error)

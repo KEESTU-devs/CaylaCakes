@@ -1,42 +1,76 @@
-const express = require('express'), cookieParser = require('cookie-parser')
+const express = require('express')
 const router = express.Router()
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  let cart = JSON.parse(req.cookies['shopping-cart']) || []
+function generateCartHtml (cart) {
+  let response = ''
+  cart.forEach(item => {
+    response = response +
+      `<div class="shopping_cart__item">
+        <span class="item__name"> ${item.quantity}x ${item.name}</span> 
+        <span class="item__unit_price"> $${item.unitPrice * item.quantity}</span>
+        <span id="removeItem" class="shopping_cart__item_remove" onClick="removeItem('${item.name}')"> &times;</span>
+       </div>`
+  })
+  return response
+}
 
-  let total = 0
-  let tax
+function rootAction (req, res) {
+  try {
+    let cart = JSON.parse(req.cookies['shopping-cart']) || []
 
-  cart.forEach(item => total = total + parseFloat(item.unitPrice))
-  tax = (total * 0.06).toFixed(2)
-  total = total.toFixed(2)
+    let total = 0
+    let tax
 
-  res.render('index', { cart, tax, total })
-})
+    cart.forEach(item => total = total + parseFloat(item.unitPrice))
+    tax = (total * 0.06).toFixed(2)
+    total = total.toFixed(2)
 
-router.post('/clearCart', function (req, res, next) {
-  res.cookie('shopping-cart', JSON.stringify([]))
-  res.sendStatus(200)
-})
+    res.render('index', { cart, tax, total })
+  } catch (error) {
+    console.log(error)
+    res.sendStatus(500)
+  }
+}
 
-router.post('/removeItem', function (req, res, next) {
-  let cart = JSON.parse(req.cookies['shopping-cart'])
-  cart = cart.filter(item => item.name !== req.body.item)
-  res.cookie('shopping-cart', JSON.stringify(cart))
-  res.sendStatus(200)
-})
+function emptyCart (req, res) {
+  try {
+    const cart = []
+    res.cookie('shopping-cart', JSON.stringify(cart))
+    res.status(200).send({ cart: generateCartHtml(cart) })
+  } catch (error) {
+    console.log(error)
+    res.sendStatus(500)
+  }
+}
 
-router.post('/addToCart', function (req, res, next) {
+function removeItem (req, res) {
+  try {
+    let cart = JSON.parse(req.cookies['shopping-cart'])
+    cart = cart.filter(item => item.name !== req.body.item)
+    res.cookie('shopping-cart', JSON.stringify(cart))
+    res.status(200).send({ cart: generateCartHtml(cart) })
+  } catch (error) {
+    console.log(error)
+    res.sendStatus(500)
+  }
+}
+
+function addToCart (req, res) {
   try {
     const item = [{ name: req.body.name, quantity: req.body.quantity, unitPrice: req.body.unitPrice }]
     let cart = JSON.parse(req.cookies['shopping-cart']) || []
     cart = [...cart, ...item]
     res.cookie('shopping-cart', JSON.stringify(cart))
-    res.sendStatus(200)
-  } catch {
+    res.status(200).send({ cart: generateCartHtml(cart) })
+  } catch (error) {
+    console.log(error)
     res.sendStatus(500)
   }
-})
+}
+
+router.post('/addToCart', addToCart)
+router.post('/clearCart', emptyCart)
+router.post('/removeItem', removeItem)
+router.get('/', rootAction)
 
 module.exports = router
