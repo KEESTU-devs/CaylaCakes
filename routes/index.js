@@ -4,17 +4,18 @@ const router = express.Router()
 const ua = require('universal-analytics')
 const visitor = ua(process.env.GOOGLE_ANALYTICS_ID, { http: true })
 
-function trackEvent (page, title) {
+function trackEvent (page, title, req) {
   try {
-    visitor.pageview(page, 'caylacakes.com', title).send()
+    visitor.set("uid", req.ip)
+    visitor.event(page, title, req.ip).send()
   } catch (error) {
     console.log('Google Analytics Error: ', error)
   }
 }
 
-function trackError (page, title) {
+function trackError (page, title, req) {
   try {
-    const visitor = ua(process.env.GOOGLE_ANALYTICS_ID, { http: true })
+    visitor.set("uid", req.ip)
     visitor.exception(page, 'caylacakes.com', title).send()
   } catch (error) {
     console.log('Google Analytics Error: ', error)
@@ -65,11 +66,11 @@ function rootAction (req, res) {
     tax = (total * 0.06).toFixed(2)
     total = total.toFixed(2)
 
-    trackEvent('/', 'index')
+    trackEvent('/', 'index', req)
     res.render('index', { cart, tax, total })
   } catch (error) {
     console.log(error)
-    trackError('/', 'index')
+    trackError('/', 'index', req)
     res.sendStatus(500)
   }
 }
@@ -78,11 +79,11 @@ function emptyCart (req, res) {
   try {
     const cart = []
     res.cookie('shopping-cart', JSON.stringify(cart))
-    trackEvent('/clearCart', 'empty-cart')
+    trackEvent('/clearCart', 'empty-cart', req)
     res.status(200).send({ cart: generateCartHtml(cart), totals: generateTotals(cart) })
   } catch (error) {
     console.log(error)
-    trackError('/clearCart', 'empty-cart')
+    trackError('/clearCart', 'empty-cart', req)
     res.sendStatus(500)
   }
 }
@@ -92,11 +93,11 @@ function removeItem (req, res) {
     let cart = JSON.parse(req.cookies['shopping-cart'])
     cart = cart.filter(item => item.name !== req.body.item)
     res.cookie('shopping-cart', JSON.stringify(cart))
-    trackEvent('/removeItem', 'remove-item')
+    trackEvent('/removeItem', 'remove-item', req)
     res.status(200).send({ cart: generateCartHtml(cart), totals: generateTotals(cart) })
   } catch (error) {
     console.log(error)
-    trackError('/removeItem', 'remove-item')
+    trackError('/removeItem', 'remove-item', req)
     res.sendStatus(500)
   }
 }
@@ -107,11 +108,11 @@ function addToCart (req, res) {
     let cart = req.cookies['shopping-cart'] ? JSON.parse(req.cookies['shopping-cart']) : []
     cart = [...cart, ...item]
     res.cookie('shopping-cart', JSON.stringify(cart))
-    trackEvent('/addToCart', 'add-to-cart')
+    trackEvent('/addToCart', 'add-to-cart', req)
     res.status(200).send({ cart: generateCartHtml(cart), totals: generateTotals(cart) })
   } catch (error) {
     console.log(error)
-    trackError('/addToCart', 'add-to-cart')
+    trackError('/addToCart', 'add-to-cart', req)
     res.sendStatus(500)
   }
 }
