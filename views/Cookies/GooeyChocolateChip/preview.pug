@@ -11,6 +11,7 @@
       br
       small.item__price_subtext per dozen
     button#gooeyChocolateChip.item__add_to_cart() Add to Cart
+  div#gooeyChocolateToast Added Gooey Chocolate Chip to Cart!
 
   script.
     $('#gooeyChocolateChip').on('click', function (e) {
@@ -22,6 +23,11 @@
         success: function (resultData) {
           $('.cart').html(resultData.cart)
           $('.totals').html(resultData.totals)
+          var x = document.getElementById("gooeyChocolateToast")
+          x.className = "show"
+          setTimeout(function () {
+            x.className = x.className.replace("show", "");
+          }, 3000)
         },
         error: function (error) {
           console.log(error)

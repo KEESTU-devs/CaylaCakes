@@ -10,7 +10,8 @@
       span.item__price_value $4.99
       br
       small.item__price_subtext per dozen
-  button#cinnamonCookie.item__add_to_cart Add to Cart
+    button#cinnamonCookie.item__add_to_cart Add to Cart
+  div#cinnamonToast Added Cinnamon Cookies to Cart!
 
   script.
     $('#cinnamonCookie').on('click', function (e) {
@@ -22,6 +23,11 @@
         success: function (resultData) {
           $('.cart').html(resultData.cart)
           $('.totals').html(resultData.totals)
+          var x = document.getElementById("cinnamonToast")
+          x.className = "show"
+          setTimeout(function () {
+            x.className = x.className.replace("show", "");
+          }, 3000)
         },
         error: function (error) {
           console.log(error)

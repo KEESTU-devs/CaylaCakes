@@ -120,3 +120,12 @@ h3.title__light {
 .white {
   color: var(--color-white) !important;
 }
+
+.view_shoppingCart {
+  width: 16em;
+  height: 3em;
+  font-size: 19px;
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  position: relative;
+}

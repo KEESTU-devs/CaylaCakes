@@ -4,6 +4,7 @@
 @import "homepage.css";
 @import "footer.css";
 @import "items.css";
+@import "snackbar.css";
 
 body {
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
