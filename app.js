@@ -6,6 +6,8 @@ const logger = require('morgan')
 
 require('dotenv').config()
 
+const ua = require('universal-analytics')
+exports.visitor = ua(process.env.GOOGLE_ANALYTICS_ID, { http: true })
 
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')

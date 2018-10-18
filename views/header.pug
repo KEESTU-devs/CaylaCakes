@@ -26,11 +26,11 @@ header.header
       document.getElementById("sidenav").style.width = "0";
     }
 
-    function removeItem (name) {
+    function removeItem (id) {
       $.ajax({
         type: 'POST',
         url: `/removeItem`,
-        data: { item: name },
+        data: { item: id },
         success: function (resultData) {
           console.log(resultData)
           $('.cart').html(resultData.cart)

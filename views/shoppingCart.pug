@@ -6,7 +6,7 @@
           .shopping_cart__item
             span.item__name= `${item.quantity}x ${item.name} `
             span.item__unit_price= `$${item.unitPrice * item.quantity}`
-            span#removeItem.shopping_cart__item_remove(onClick='removeItem(\'' + item.name + '\')') &times;
+            span#removeItem.shopping_cart__item_remove(onClick='removeItem(\'' + item.id + '\')') &times;
     .totals
       .row
         small 6% tax
