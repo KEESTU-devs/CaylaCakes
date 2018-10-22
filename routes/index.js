@@ -28,7 +28,7 @@ function generateCartHtml (cart) {
     id++
     response = response +
       `<div id="${item.id}" class="shopping_cart__item">
-        <span class="item__name"> ${item.quantity}x ${item.name}</span> 
+        <span class="item__name"> ${item.quantity}x ${item.name}</span>
         <span class="item__unit_price"> $${(item.unitPrice * item.quantity).toFixed(2)}</span>
         <span id="removeItem" class="shopping_cart__item_remove" onClick="removeItem('${item.id}')"> &times;</span>
        </div>`
@@ -45,7 +45,7 @@ function generateTotals (cart) {
   total = (parseFloat(total) + parseFloat(tax)).toFixed(2)
 
   return `<div class="row">
-      <small>8% tax</small> 
+      <small>8% tax</small>
       <span> $${tax}</span>
       <div class="row">
          <hr>
@@ -142,9 +142,14 @@ function uuidv4 () {
   })
 }
 
+function contactUs (req, res) {
+  res.render('contactUs')
+}
+
 router.post('/addToCart', addToCart)
 router.post('/clearCart', emptyCart)
 router.post('/removeItem', removeItem)
 router.get('/', rootAction)
+router.get('/contactUs', contactUs)
 
 module.exports = router
